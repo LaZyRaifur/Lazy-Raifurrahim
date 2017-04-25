@@ -1,0 +1,32 @@
+//Word Scramble
+//raifurrahimcse13@gmail.com
+
+#include<cstdio>
+#include<stack>
+
+using namespace std;
+stack<char>s;
+
+int main()
+{
+    //freopen("inn.txt", "r", stdin);
+    char str;
+
+    while((str=getchar())!=EOF)
+    {
+        if(str==' '|| str=='\n')
+        {
+            while(s.size()!=0)
+            {
+                putchar(s.top());
+                s.pop();
+            }
+            putchar(str);
+        }
+        else
+        {
+            s.push(str);
+        }
+    }
+
+}
